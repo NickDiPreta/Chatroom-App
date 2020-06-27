@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Chatroom-App/static/css/main.da67cd58.chunk.css",
+    "main.js": "/Chatroom-App/static/js/main.c4503682.chunk.js",
+    "main.js.map": "/Chatroom-App/static/js/main.c4503682.chunk.js.map",
+    "runtime-main.js": "/Chatroom-App/static/js/runtime-main.a6f136b8.js",
+    "runtime-main.js.map": "/Chatroom-App/static/js/runtime-main.a6f136b8.js.map",
+    "static/js/2.983c804f.chunk.js": "/Chatroom-App/static/js/2.983c804f.chunk.js",
+    "static/js/2.983c804f.chunk.js.map": "/Chatroom-App/static/js/2.983c804f.chunk.js.map",
+    "index.html": "/Chatroom-App/index.html",
+    "precache-manifest.344217f52f704bf548457432d864f480.js": "/Chatroom-App/precache-manifest.344217f52f704bf548457432d864f480.js",
+    "service-worker.js": "/Chatroom-App/service-worker.js",
+    "static/css/main.da67cd58.chunk.css.map": "/Chatroom-App/static/css/main.da67cd58.chunk.css.map",
+    "static/js/2.983c804f.chunk.js.LICENSE.txt": "/Chatroom-App/static/js/2.983c804f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a6f136b8.js",
+    "static/js/2.983c804f.chunk.js",
+    "static/css/main.da67cd58.chunk.css",
+    "static/js/main.c4503682.chunk.js"
+  ]
+}
