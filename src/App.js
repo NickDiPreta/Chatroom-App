@@ -44,7 +44,7 @@ class App extends Component {
       this.setState({ member });
     });
     const room = this.drone.subscribe("observable-room", {
-      historyCount: 5,
+      historyCount: 6,
     });
     room.on("history_message", (message) => {
       const messages = this.state.messages;
@@ -77,11 +77,15 @@ class App extends Component {
           <span className="channel">Nick's Lounge</span>
           <img className="user-profile" src={avatar} />
         </div>
+        <div className="main-content">
+        {this.state.viewMenu ? <ChannelList/> : ""}
         <div className="messages-wrapper">
+          
           <Messages
             messages={this.state.messages}
             currentMember={this.state.member}
           />
+        </div>
         </div>
         <Input
           currentMember={this.state.member}
