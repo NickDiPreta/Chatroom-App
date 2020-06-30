@@ -10,12 +10,12 @@ const myStyles = {
 };
 
 const MyWrapper = styled.div`
-  color: white;
+  color: black;
 
   ${(props) =>
     props.border
       ? css`
-          border: 2px solid black;
+          border:none;
         `
       : ""}
 `;
@@ -61,6 +61,8 @@ class App extends Component {
       const messages = this.state.messages;
       messages.push({ member, text: data});
       this.setState({ messages });
+      let scrollingElement = document.querySelector("#root > div > div.messages-wrapper")
+      scrollingElement.scrollTop = scrollingElement.scrollHeight;
     });
 
   }
@@ -73,21 +75,25 @@ class App extends Component {
             <h1>Nick's Lounge</h1>
           </MyWrapper>
         </div>
-
+        <div className="messages-wrapper">
         <Messages
           messages={this.state.messages}
           currentMember={this.state.member}
         />
+        <div className="empty"></div>
+        </div>
         <Input currentMember={this.state.member} onSendMessage={this.onSendMessage} />
       </div>
     );
   }
-
+  
   onSendMessage = (message) => {
+    
     this.drone.publish({
       room: "observable-room",
       message,
     });
+
   };
 }
 

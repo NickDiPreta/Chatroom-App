@@ -1,16 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 .App {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
+  font-family: 'Lato', sans-serif;
 }
 
 .App-header {
-  background-color: #262626;
+  background-color: white;
   overflow: visible;
   width: 100%;
   text-align: center;
   color: white;
+  margin-top: 10vh;
 }
 
 .Messages-list {
@@ -20,13 +23,13 @@
   margin: 0 auto;
   list-style: none;
   padding-left: 0;
-  flex-grow: 1;
-  overflow: auto;
+  height: 80vh;
 }
 
 .Messages-message {
   display: flex;
   margin-top: 10px;
+  align-items: center;
 }
 
 .Messages-message.currentMember {
@@ -47,7 +50,6 @@
   height: 35px;
   width: 35px;
   border-radius: 50%;
-  display: inline-block;
   margin: 0 10px -10px;
 }
 
@@ -98,10 +100,13 @@ button {
   margin-left: 10px;
 }
 
-ul{
+ul {
   padding-inline-start: 0;
 }
 
-.bold{
+.bold {
   font-weight: bold;
+}
+.messages-wrapper{
+  overflow: scroll;
 }
