@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Chatroom-App/static/css/main.da67cd58.chunk.css",
-    "main.js": "/Chatroom-App/static/js/main.314fa21d.chunk.js",
-    "main.js.map": "/Chatroom-App/static/js/main.314fa21d.chunk.js.map",
+    "main.css": "/Chatroom-App/static/css/main.293e42f3.chunk.css",
+    "main.js": "/Chatroom-App/static/js/main.786dd0f5.chunk.js",
+    "main.js.map": "/Chatroom-App/static/js/main.786dd0f5.chunk.js.map",
     "runtime-main.js": "/Chatroom-App/static/js/runtime-main.a6f136b8.js",
     "runtime-main.js.map": "/Chatroom-App/static/js/runtime-main.a6f136b8.js.map",
-    "static/js/2.78f85475.chunk.js": "/Chatroom-App/static/js/2.78f85475.chunk.js",
-    "static/js/2.78f85475.chunk.js.map": "/Chatroom-App/static/js/2.78f85475.chunk.js.map",
+    "static/js/2.07192db9.chunk.js": "/Chatroom-App/static/js/2.07192db9.chunk.js",
+    "static/js/2.07192db9.chunk.js.map": "/Chatroom-App/static/js/2.07192db9.chunk.js.map",
     "index.html": "/Chatroom-App/index.html",
-    "precache-manifest.590b8cd57f4f2a316d3c7ea2e3ea0dad.js": "/Chatroom-App/precache-manifest.590b8cd57f4f2a316d3c7ea2e3ea0dad.js",
+    "precache-manifest.64725e75bf3fc7ac8af4f9c7dca368e2.js": "/Chatroom-App/precache-manifest.64725e75bf3fc7ac8af4f9c7dca368e2.js",
     "service-worker.js": "/Chatroom-App/service-worker.js",
-    "static/css/main.da67cd58.chunk.css.map": "/Chatroom-App/static/css/main.da67cd58.chunk.css.map",
-    "static/js/2.78f85475.chunk.js.LICENSE.txt": "/Chatroom-App/static/js/2.78f85475.chunk.js.LICENSE.txt"
+    "static/css/main.293e42f3.chunk.css.map": "/Chatroom-App/static/css/main.293e42f3.chunk.css.map",
+    "static/js/2.07192db9.chunk.js.LICENSE.txt": "/Chatroom-App/static/js/2.07192db9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a6f136b8.js",
-    "static/js/2.78f85475.chunk.js",
-    "static/css/main.da67cd58.chunk.css",
-    "static/js/main.314fa21d.chunk.js"
+    "static/js/2.07192db9.chunk.js",
+    "static/css/main.293e42f3.chunk.css",
+    "static/js/main.786dd0f5.chunk.js"
   ]
 }
