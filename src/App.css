@@ -109,4 +109,9 @@ ul {
 }
 .messages-wrapper{
   overflow: scroll;
+  scrollbar-width: none;
+}
+::-webkit-scrollbar { 
+ width: 0;
+ background: transparent;
 }
