@@ -43,7 +43,7 @@
 }
 
 .Messages-message.currentMember {
-  /*justify-content: flex-end;*/
+  
   flex-direction: row-reverse;
   text-align: right;
 }
@@ -120,10 +120,12 @@ ul {
 }
 .messages-wrapper {
   overflow: scroll;
+  width:100vw;
   scrollbar-width: none;
   padding-left: 20px;
   position: relative;
   margin-top: 0px;
+  z-index: 1;
 }
 ::-webkit-scrollbar {
   width: 0;
@@ -147,31 +149,44 @@ ul {
   border-radius: 50%;
 }
 
-.menu{
-  background-color: tomato;
-  color: white;
-  width: 40vw;
-  text-align: center;
-  border: 1px solid black;  
-}
-
 .main-content{
   display: flex;
   flex-direction: row;
   height:80vh;
 }
-.my-node-enter {
-  opacity: 0;
-  transition: opacity 200ms;
+.menu{
+  position: absolute;
+  left: 0;
+  width:80vw;
+  height: 80vh;
+  background-color: tomato;
+  color: white;
+  flex-grow: 3 ;
+  text-align: center;
+  z-index: 2;
 }
-.my-node-enter-active {
+.my-node-on-enter{
+  transform: scale(0.0)
+}
+.my-node-on-enter-active{
+  transform: scale(0.9)
+}
+.my-node-enter {
+  opacity: 1;
+  transition: opacity 500ms, transform 500ms;
+}
+
+.my-node-on-exit {
   opacity: 1;
   transition: opacity 300ms, transform 300ms;
 }
-.my-node-exit {
-  opacity:1;
+.my-node-on-exit-active {
+  opacity: .5;
+  transition: opacity 300ms, transform 300ms;
 }
-.my-node-exit-active {
+.my-node-exit {
   opacity: 0;
   transition: opacity 300ms, transform 300ms;
 }
+
+

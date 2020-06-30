@@ -29,6 +29,7 @@ class App extends Component {
       color: randomColor(),
     },
     viewMenu: false,
+    viewMessages: true,
   };
 
   constructor() {
@@ -60,15 +61,19 @@ class App extends Component {
       messages.push({ member, text: data });
       this.setState({ messages });
       let scrollingElement = document.querySelector(
-        "#root > div > div.messages-wrapper"
+        "#root > div > div.main-content > div"
       );
       scrollingElement.scrollTop = scrollingElement.scrollHeight;
     });
   }
   handleClick = () => {
+    const mesg = !this.state.viewMessages;
+    this.setState((state=>({viewMessages: mesg})))
     const menu = !this.state.viewMenu;
     this.setState((state) => ({ viewMenu: menu }));
+    
   };
+ 
   render() {
     return (
       <div className="App">
@@ -80,15 +85,15 @@ class App extends Component {
           <img className="user-profile" src={avatar} />
         </div>
         <div className="main-content">
-          <CSSTransition in={this.state.viewMenu} timeout={300} classNames="my-node" unmountOnExit>
+          <CSSTransition in={this.state.viewMenu} timeout={300} classNames="my-node" unmountOnExit onExited={()=> this.showMessages}>
             <ChannelList />
           </CSSTransition>
-
+          
           <div className="messages-wrapper">
             <Messages
               messages={this.state.messages}
               currentMember={this.state.member}
-            />
+            /> 
           </div>
         </div>
         <Input
