@@ -1,19 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 .App {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
-  font-family: 'Lato', sans-serif;
+  width: 100vw;
+  font-family: "Lato", sans-serif;
 }
 
 .App-header {
+  margin-top: 2vh;
+  padding-bottom: 2vh;
   background-color: white;
   overflow: visible;
   width: 100%;
   text-align: center;
-  color: white;
-  margin-top: 10vh;
+  color: black;
+  font-size: 1.5em;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  border-bottom: 1px solid gray;
 }
 
 .Messages-list {
@@ -22,8 +30,7 @@
   width: 100%;
   margin: 0 auto;
   list-style: none;
-  padding-left: 0;
-  height: 80vh;
+  margin-top: 0px;
 }
 
 .Messages-message {
@@ -76,24 +83,24 @@
 
 form {
   display: flex;
-  width: 95%;
+  width: 90%;
   justify-content: space-between;
   max-width: 900px;
-  margin: 0 auto 40px;
+  margin: 0 auto 10px;
 }
 
 input {
-  padding: 5px;
-  font-size: 16px;
+  padding: 7px;
+  font-size: 20px;
   border-radius: 8px;
-  border: 1px solid orangered;
+  border: 1px solid tomato;
   flex-grow: 1;
 }
 
 button {
   padding: 5px 10px;
   font-size: 16px;
-  background-color: orangered;
+  background-color: tomato;
   color: white;
   border: none;
   border-radius: 8px;
@@ -107,11 +114,31 @@ ul {
 .bold {
   font-weight: bold;
 }
-.messages-wrapper{
+.messages-wrapper {
   overflow: scroll;
   scrollbar-width: none;
+  padding-left: 20px;
+  position: relative;
+  margin-top: 0px;
 }
-::-webkit-scrollbar { 
- width: 0;
- background: transparent;
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+.hamburger {
+  height: 22px;
+  width: 22px;
+  background-color: tomato;
+  border-radius: 50%;
+  padding: 10px;
+  color: white;
+}
+
+.user-profile {
+  height: 30px;
+  width: 30px;
+  padding: 8px;
+  background-color: white;
+  border-radius: 50%;
 }

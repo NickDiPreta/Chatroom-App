@@ -22,7 +22,7 @@ const Input = (props) =>{
         <input onChange={e=> onChange(e)}
         value={text}
         type="text"
-        placeholder="Enter your message"
+        placeholder="Message"
         autoFocus={true} />
         <button>Send</button>
       </form>

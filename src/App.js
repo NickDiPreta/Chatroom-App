@@ -4,21 +4,27 @@ import Messages from "./Messages";
 import Input from "./Input";
 import randomName from "./Components/RandomName";
 import styled, { css } from "styled-components";
+import hamburger from "./hamburger.png"
+import avatar from "./blank-avatar.svg"
+// const myStyles = {
+//   backgroundColor: "pink",
+// };
 
-const myStyles = {
-  backgroundColor: "pink",
-};
-
-const MyWrapper = styled.div`
-  color: black;
-
-  ${(props) =>
-    props.border
-      ? css`
-          border:none;
-        `
-      : ""}
-`;
+// const MyWrapper = styled.div`
+//   display:flex;
+//   color: black;
+//   font-size: 1.5em;
+//   align-items:center;
+//   justify-content: space-around;
+//   align-content: center;
+//   height:100%;
+//   ${(props) =>
+//     props.border
+//       ? css`
+//           border:none;
+//         `
+//       : ""}
+// `;
 
 function randomColor() {
   return "#" + Math.floor(Math.random() * 0xffffff).toString(16);
@@ -71,9 +77,11 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <MyWrapper border>
-            <h1>Nick's Lounge</h1>
-          </MyWrapper>
+          
+            <img className="hamburger"src={hamburger}/>
+            <span className="channel">Nick's Lounge</span>
+            <img className="user-profile"src={avatar}/>
+          
         </div>
         <div className="messages-wrapper">
         <Messages
