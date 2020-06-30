@@ -14,9 +14,11 @@ import {
   Link,
 } from "react-router-dom";
 import ChannelList from "./Components/ChannelList";
+import { CSSTransition } from "react-transition-group";
 
 function randomColor() {
-  return "#" + Math.floor(Math.random() * 0xffffff).toString(16);
+  // return "#" + Math.floor(Math.random() * 0xffffff).toString(16);
+  return("#6495ed")
 }
 
 class App extends Component {
@@ -65,7 +67,7 @@ class App extends Component {
   }
   handleClick = () => {
     const menu = !this.state.viewMenu;
-    this.setState((state => ({viewMenu: menu})))
+    this.setState((state) => ({ viewMenu: menu }));
   };
   render() {
     return (
@@ -78,14 +80,16 @@ class App extends Component {
           <img className="user-profile" src={avatar} />
         </div>
         <div className="main-content">
-        {this.state.viewMenu ? <ChannelList/> : ""}
-        <div className="messages-wrapper">
-          
-          <Messages
-            messages={this.state.messages}
-            currentMember={this.state.member}
-          />
-        </div>
+          <CSSTransition in={this.state.viewMenu} timeout={300} classNames="my-node" unmountOnExit>
+            <ChannelList />
+          </CSSTransition>
+
+          <div className="messages-wrapper">
+            <Messages
+              messages={this.state.messages}
+              currentMember={this.state.member}
+            />
+          </div>
         </div>
         <Input
           currentMember={this.state.member}

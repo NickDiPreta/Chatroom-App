@@ -2,7 +2,7 @@ import React from "react";
 import ConvertTimeStamp from "./Components/ConvertTimeStamp";
 
 function randomColor() {
-  return "#" + Math.floor(Math.random() * 0xffffff).toString(16);
+  return("#6495ed");
 }
 const Messages = (props) => {
   const messages = props.messages;

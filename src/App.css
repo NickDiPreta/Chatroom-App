@@ -75,7 +75,7 @@
   max-width: 400px;
   margin: 0;
   border-radius: 12px;
-  background-color: cornflowerblue;
+  background-color: rgb(100, 149, 237);
   color: white;
   display: inline-block;
 }
@@ -152,11 +152,26 @@ ul {
   color: white;
   width: 40vw;
   text-align: center;
-  border: 1px solid black;
+  border: 1px solid black;  
 }
 
 .main-content{
   display: flex;
   flex-direction: row;
   height:80vh;
+}
+.my-node-enter {
+  opacity: 0;
+  transition: opacity 200ms;
+}
+.my-node-enter-active {
+  opacity: 1;
+  transition: opacity 300ms, transform 300ms;
+}
+.my-node-exit {
+  opacity:1;
+}
+.my-node-exit-active {
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
 }
