@@ -21,7 +21,7 @@
   display: flex;
   justify-content: space-around;
   align-content: center;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid 	rgba(211,211,211,0.5);
 }
 
 .Messages-list {
@@ -37,6 +37,9 @@
   display: flex;
   margin-top: 10px;
   align-items: center;
+  border-top: 1px solid rgba(211,211,211,0.3);
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .Messages-message.currentMember {
