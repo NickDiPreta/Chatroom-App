@@ -10,7 +10,8 @@ const Input = (props) =>{
 
   const onSubmit = (e)=> {
     e.preventDefault();
-    props.onSendMessage(text)
+    let uName = props.currentMember.username
+    props.onSendMessage(uName+ " : "+text)
     setText("")
   }
 
@@ -21,8 +22,8 @@ const Input = (props) =>{
         <input onChange={e=> onChange(e)}
         value={text}
         type="text"
-        placeholder="Enter your message and press ENTER"
-        autofocus="true" />
+        placeholder="Enter your message"
+        autoFocus={true} />
         <button>Send</button>
       </form>
     </div>
