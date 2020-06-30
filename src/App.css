@@ -101,3 +101,7 @@ button {
 ul{
   padding-inline-start: 0;
 }
+
+.bold{
+  font-weight: bold;
+}
