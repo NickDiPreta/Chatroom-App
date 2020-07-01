@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/Chatroom-App/static/css/main.1a3c7788.chunk.css",
-    "main.js": "/Chatroom-App/static/js/main.59520032.chunk.js",
-    "main.js.map": "/Chatroom-App/static/js/main.59520032.chunk.js.map",
+    "main.css": "/Chatroom-App/static/css/main.3301e02e.chunk.css",
+    "main.js": "/Chatroom-App/static/js/main.3263210c.chunk.js",
+    "main.js.map": "/Chatroom-App/static/js/main.3263210c.chunk.js.map",
     "runtime-main.js": "/Chatroom-App/static/js/runtime-main.a6f136b8.js",
     "runtime-main.js.map": "/Chatroom-App/static/js/runtime-main.a6f136b8.js.map",
     "static/js/2.6cd14b70.chunk.js": "/Chatroom-App/static/js/2.6cd14b70.chunk.js",
     "static/js/2.6cd14b70.chunk.js.map": "/Chatroom-App/static/js/2.6cd14b70.chunk.js.map",
     "index.html": "/Chatroom-App/index.html",
-    "precache-manifest.6acc92aac2ece32960e2106e9a8b9ebb.js": "/Chatroom-App/precache-manifest.6acc92aac2ece32960e2106e9a8b9ebb.js",
+    "precache-manifest.8080a7f5673f06f22ef0d4f1570456a5.js": "/Chatroom-App/precache-manifest.8080a7f5673f06f22ef0d4f1570456a5.js",
     "service-worker.js": "/Chatroom-App/service-worker.js",
-    "static/css/main.1a3c7788.chunk.css.map": "/Chatroom-App/static/css/main.1a3c7788.chunk.css.map",
+    "static/css/main.3301e02e.chunk.css.map": "/Chatroom-App/static/css/main.3301e02e.chunk.css.map",
     "static/js/2.6cd14b70.chunk.js.LICENSE.txt": "/Chatroom-App/static/js/2.6cd14b70.chunk.js.LICENSE.txt",
     "static/media/blank-avatar.svg": "/Chatroom-App/static/media/blank-avatar.376ab138.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.a6f136b8.js",
     "static/js/2.6cd14b70.chunk.js",
-    "static/css/main.1a3c7788.chunk.css",
-    "static/js/main.59520032.chunk.js"
+    "static/css/main.3301e02e.chunk.css",
+    "static/js/main.3263210c.chunk.js"
   ]
 }
