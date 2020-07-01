@@ -18,7 +18,7 @@ const NewUser = (props) => {
       <div className="userhead">
         <h1>Enter User Information</h1>
       </div>
-      <Link to="/">
+      <Link to="/Chatroom-App/">
         <HoverButton>Back</HoverButton>
       </Link>
       <p>Username: {props.name}</p>

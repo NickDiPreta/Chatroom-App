@@ -47,7 +47,7 @@ const App = () => {
   return (
     <>
     <Switch>
-      <Route path="/" exact render={(props)=>(<General
+      <Route path="/Chatroom-App/" exact render={(props)=>(<General
         channel={channel}
         changeMasterChannel={changeMasterChannel}
         key={channel}
