@@ -31,7 +31,7 @@ class General extends Component {
   state = {
     messages: [],
     member: {
-      username: randomName(),
+      username: "",
       color: randomColor(),
     },
     viewMenu: false,
@@ -45,6 +45,7 @@ class General extends Component {
     this.drone = new window.Scaledrone("orrU5l6VPP3aRPzX", {
       data: this.state.member,
     });
+    this.setState((state) => ({ username: this.props.name }));
     this.drone.on("open", (error) => {
       if (error) {
         return console.error(error);
@@ -97,7 +98,7 @@ class General extends Component {
             </HoverButton>
           </div>
           <span className="channel">{this.props.channel}</span>
-          <img className="user-profile" src={avatar} />
+          <div className="userinfo"><Link to="/user"><img className="user-profile" src={avatar} /><span className="username">{this.props.name}</span></Link></div>
         </div>
         <div className="main-content">
           <CSSTransition
@@ -113,12 +114,14 @@ class General extends Component {
 
           <div className="messages-wrapper">
             <Messages
+              name={this.props.name}
               messages={this.state.messages}
               currentMember={this.state.member}
             />
           </div>
         </div>
         <Input
+          name={this.props.name}
           currentMember={this.state.member}
           onSendMessage={this.onSendMessage}
         />

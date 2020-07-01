@@ -36,7 +36,7 @@ const Messages = (props) => {
         ? "Messages-message currentMember"
         : "Messages-message";
       const username = member.clientData.username;
-      let newText = text.replace(`${username} :`, "");
+      let newText = text.replace(`${props.name} :`, "");
       return (
         <li className={className}>
           <span className="avatar" style={{ backgroundColor: member.color }} />

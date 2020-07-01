@@ -143,9 +143,7 @@ ul {
 .user-profile {
   height: 30px;
   width: 30px;
-  padding: 8px;
   background-color: white;
-  border-radius: 50%;
 }
 
 .main-content {
@@ -217,4 +215,15 @@ h4{
 a {
   text-decoration: none;
   color: white;
+}
+.username{
+  color:black;
+  margin-left:2px;
+  line-height: 1.5em;
+}
+.userinfo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }

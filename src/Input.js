@@ -10,7 +10,7 @@ const Input = (props) =>{
 
   const onSubmit = (e)=> {
     e.preventDefault();
-    let uName = props.currentMember.username
+    let uName = props.name
     props.onSendMessage(uName+ " : "+text)
     setText("")
   }
