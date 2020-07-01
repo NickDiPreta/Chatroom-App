@@ -14,7 +14,7 @@ import {
   Link,
 } from "react-router-dom";
 import ChannelList from "./Components/ChannelList";
-import { CSSTransition } from "react-transition-group";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 function randomColor() {
   // return "#" + Math.floor(Math.random() * 0xffffff).toString(16);
@@ -85,7 +85,7 @@ class App extends Component {
           <img className="user-profile" src={avatar} />
         </div>
         <div className="main-content">
-          <CSSTransition in={this.state.viewMenu} timeout={300} classNames="my-node" unmountOnExit onExited={()=> this.showMessages}>
+          <CSSTransition in={this.state.viewMenu} timeout={300} classNames="my-node" unmountOnExit onExited={()=> this.showMessages} appear>
             <ChannelList />
           </CSSTransition>
           
