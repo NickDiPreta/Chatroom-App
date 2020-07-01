@@ -5,6 +5,7 @@ import Input from "./Input";
 import randomName from "./Components/RandomName";
 import styled, { css } from "styled-components";
 import hamburger from "./hamburger.png";
+import back from "./back-arrow.png"
 import avatar from "./blank-avatar.svg";
 import {
   BrowserRouter as Router,
@@ -18,8 +19,13 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 function randomColor() {
   // return "#" + Math.floor(Math.random() * 0xffffff).toString(16);
-  return("#6495ed")
+  return "#6495ed";
 }
+const HoverButton = styled.p`
+  :hover {
+    cursor: pointer;
+  }
+`;
 
 class App extends Component {
   state = {
@@ -68,32 +74,44 @@ class App extends Component {
   }
   handleClick = () => {
     const mesg = !this.state.viewMessages;
-    this.setState((state=>({viewMessages: mesg})))
+    this.setState((state) => ({ viewMessages: mesg }));
     const menu = !this.state.viewMenu;
     this.setState((state) => ({ viewMenu: menu }));
-    
   };
- 
+
   render() {
     return (
       <div className="App">
         <div className="App-header">
           <div onClick={this.handleClick}>
-            <img className="hamburger" src={hamburger} />
+            <HoverButton hover>
+              {this.state.viewMessages ? (
+                <img className="hamburger" src={hamburger} />
+              ) : (
+                <img className="hamburger" src={back} />
+              )}
+            </HoverButton>
           </div>
           <span className="channel">Nick's Lounge</span>
           <img className="user-profile" src={avatar} />
         </div>
         <div className="main-content">
-          <CSSTransition in={this.state.viewMenu} timeout={300} classNames="my-node" unmountOnExit onExited={()=> this.showMessages} appear>
+          <CSSTransition
+            in={this.state.viewMenu}
+            timeout={300}
+            classNames="my-node"
+            unmountOnExit
+            onExited={() => this.showMessages}
+            appear
+          >
             <ChannelList />
           </CSSTransition>
-          
+
           <div className="messages-wrapper">
             <Messages
               messages={this.state.messages}
               currentMember={this.state.member}
-            /> 
+            />
           </div>
         </div>
         <Input

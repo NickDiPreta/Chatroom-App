@@ -20,7 +20,7 @@
   display: flex;
   justify-content: space-around;
   align-content: center;
-  border-bottom: 1px solid 	rgba(211,211,211,0.5);
+  border-bottom: 1px solid rgba(211, 211, 211, 0.5);
 }
 
 .Messages-list {
@@ -37,13 +37,12 @@
   display: flex;
   margin-top: 10px;
   align-items: center;
-  border-top: 1px solid rgba(211,211,211,0.3);
+  border-top: 1px solid rgba(211, 211, 211, 0.3);
   padding-top: 5px;
   padding-bottom: 5px;
 }
 
 .Messages-message.currentMember {
-  
   flex-direction: row-reverse;
   text-align: right;
 }
@@ -120,7 +119,7 @@ ul {
 }
 .messages-wrapper {
   overflow: scroll;
-  width:100vw;
+  width: 100vw;
   scrollbar-width: none;
   padding-left: 20px;
   position: relative;
@@ -138,7 +137,7 @@ ul {
   background-color: tomato;
   border-radius: 50%;
   padding: 10px;
-  color: white;
+  color: white; 
 }
 
 .user-profile {
@@ -149,28 +148,32 @@ ul {
   border-radius: 50%;
 }
 
-.main-content{
+.main-content {
   display: flex;
   flex-direction: row;
-  height:80vh;
+  height: 80vh;
 }
-.menu{
+.menu {
   position: absolute;
   left: 0;
-  width:80vw;
+  width: 80vw;
   height: 80vh;
   background-color: tomato;
   color: white;
-  flex-grow: 3 ;
+  flex-grow: 3;
   text-align: center;
   z-index: 2;
+  border-left: none;
+  border-radius: 0px 5px 5px 0px;
 }
 
-.my-node-enter, .my-node-appear {
+.my-node-enter,
+.my-node-appear {
   width: 0;
   color: transparent;
+  border: none;
 }
-.my-node-enter-active{
+.my-node-enter-active {
   transition: all 400ms;
   width: 80vw;
   background-color: tomato;
@@ -185,7 +188,5 @@ ul {
 .my-node-exit-active {
   transition: all 400ms;
   width: 0;
-  color:transparent;
+  color: transparent;
 }
-
-
