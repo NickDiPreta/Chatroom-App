@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/Chatroom-App/static/css/main.922eaa9a.chunk.css",
-    "main.js": "/Chatroom-App/static/js/main.7b979444.chunk.js",
-    "main.js.map": "/Chatroom-App/static/js/main.7b979444.chunk.js.map",
+    "main.css": "/Chatroom-App/static/css/main.bc5a447a.chunk.css",
+    "main.js": "/Chatroom-App/static/js/main.506d504f.chunk.js",
+    "main.js.map": "/Chatroom-App/static/js/main.506d504f.chunk.js.map",
     "runtime-main.js": "/Chatroom-App/static/js/runtime-main.a6f136b8.js",
     "runtime-main.js.map": "/Chatroom-App/static/js/runtime-main.a6f136b8.js.map",
-    "static/js/2.9688effb.chunk.js": "/Chatroom-App/static/js/2.9688effb.chunk.js",
-    "static/js/2.9688effb.chunk.js.map": "/Chatroom-App/static/js/2.9688effb.chunk.js.map",
+    "static/js/2.b739e80a.chunk.js": "/Chatroom-App/static/js/2.b739e80a.chunk.js",
+    "static/js/2.b739e80a.chunk.js.map": "/Chatroom-App/static/js/2.b739e80a.chunk.js.map",
     "index.html": "/Chatroom-App/index.html",
-    "precache-manifest.4777657b59dc15272a007c62ad0da924.js": "/Chatroom-App/precache-manifest.4777657b59dc15272a007c62ad0da924.js",
+    "precache-manifest.ba5a3368051919dc2fd18c51591c8598.js": "/Chatroom-App/precache-manifest.ba5a3368051919dc2fd18c51591c8598.js",
     "service-worker.js": "/Chatroom-App/service-worker.js",
-    "static/css/main.922eaa9a.chunk.css.map": "/Chatroom-App/static/css/main.922eaa9a.chunk.css.map",
-    "static/js/2.9688effb.chunk.js.LICENSE.txt": "/Chatroom-App/static/js/2.9688effb.chunk.js.LICENSE.txt",
+    "static/css/main.bc5a447a.chunk.css.map": "/Chatroom-App/static/css/main.bc5a447a.chunk.css.map",
+    "static/js/2.b739e80a.chunk.js.LICENSE.txt": "/Chatroom-App/static/js/2.b739e80a.chunk.js.LICENSE.txt",
     "static/media/blank-avatar.svg": "/Chatroom-App/static/media/blank-avatar.376ab138.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.a6f136b8.js",
-    "static/js/2.9688effb.chunk.js",
-    "static/css/main.922eaa9a.chunk.css",
-    "static/js/main.7b979444.chunk.js"
+    "static/js/2.b739e80a.chunk.js",
+    "static/css/main.bc5a447a.chunk.css",
+    "static/js/main.506d504f.chunk.js"
   ]
 }
