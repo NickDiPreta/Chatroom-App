@@ -159,7 +159,7 @@ ul {
   position: absolute;
   left: 0;
   width: 80vw;
-  height: 75vh;
+  height: 78vh;
   background-color: tomato;
   color: white;
   flex-grow: 3;
@@ -168,7 +168,7 @@ ul {
   border-radius: 0px 5px 5px 0px;
   text-align: center;
   list-style: none;
-  max-width: 500px;
+  max-width: 400px;
 }
 
 .my-node-enter,
@@ -212,4 +212,9 @@ h4{
 }
 .menulist li{
   padding: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }
