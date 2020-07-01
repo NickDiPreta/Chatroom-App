@@ -1,20 +1,41 @@
 import React, { useState } from "react";
-
+import {
+  BrowserRouter as Router,
+  Redirect,
+  Switch,
+  Route,
+  Link,
+} from "react-router-dom";
+import styled, { css } from "styled-components";
 const NewUser = (props) => {
-  
+  const HoverButton = styled.button`
+    :hover {
+      cursor: pointer;
+    }
+  `;
   return (
     <div className="NewUser">
-      <h1>User</h1>
-      <p>Current name: {props.name}</p>
-      
-      <form onSubmit={() => props.setName(props.name)}>
-      
-      <input type="text" value={props.name} onChange={props.handleChange} id="name" />
+      <div className="userhead">
+        <h1>Enter User Information</h1>
+      </div>
+      <Link to="/">
+        <HoverButton>Back</HoverButton>
+      </Link>
+      <p>Username: {props.name}</p>
 
-      <input type="submit" />
-    </form>
+      <form className="user-form" onSubmit={props.onSub}>
+        <input
+          type="text"
+          value={props.temp}
+          placeholder="Your name here"
+          onChange={props.handleChange}
+          id="name"
+        />
+
+        <input type="submit" />
+      </form>
     </div>
   );
-}
+};
 
 export default NewUser;

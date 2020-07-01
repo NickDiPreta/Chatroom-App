@@ -20,8 +20,8 @@ const App = () => {
     changeChannel(chan);
   };
 
-  const [name, setName] = useStickyState("newUser", "count");
-  
+  const [name, setName] = useStickyState("newUser", "updatedUser");
+  const [temp, setTemp] = useState('')
 
   function useStickyState(defaultValue, key) {
     const [value, setValue] = React.useState(() => {
@@ -35,15 +35,19 @@ const App = () => {
   }
   const handleChange = (event) => {
     event.preventDefault();
-    setName(event.target.value);
+    setTemp(event.target.value);
   };
 
-
+  const onSub = (event) =>{
+    event.preventDefault()
+    setName(temp)
+    setTemp("")
+}
 
   return (
     <>
     <Switch>
-      <Route path="/Chatroom-App" exact render={(props)=>(<General
+      <Route path="/" exact render={(props)=>(<General
         channel={channel}
         changeMasterChannel={changeMasterChannel}
         key={channel}
@@ -51,7 +55,7 @@ const App = () => {
       />
       )}
       />
-      <Route path="/user" render={(props)=>(<NewUser handleChange={handleChange} name={name} setName={setName}/> )} />
+      <Route path="/user" render={(props)=>(<NewUser temp={temp}handleChange={handleChange} name={name} setName={setName} onSub={onSub}/> )} />
       </Switch>
     </>
   );
