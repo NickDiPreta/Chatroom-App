@@ -9,10 +9,7 @@ import {
   Route,
   Link,
 } from "react-router-dom";
-import NewUser from "./Components/NewUser"
-
-
-
+import NewUser from "./Components/NewUser";
 
 const App = () => {
   const [channel, changeChannel] = useState("General");
@@ -21,7 +18,7 @@ const App = () => {
   };
 
   const [name, setName] = useStickyState("newUser", "updatedUser");
-  const [temp, setTemp] = useState('')
+  const [temp, setTemp] = useState("");
 
   function useStickyState(defaultValue, key) {
     const [value, setValue] = React.useState(() => {
@@ -38,24 +35,39 @@ const App = () => {
     setTemp(event.target.value);
   };
 
-  const onSub = (event) =>{
-    event.preventDefault()
-    setName(temp)
-    setTemp("")
-}
+  const onSub = (event) => {
+    event.preventDefault();
+    setName(temp);
+    setTemp("");
+  };
 
   return (
     <>
-    <Switch>
-      <Route path="/Chatroom-App/" exact render={(props)=>(<General
-        channel={channel}
-        changeMasterChannel={changeMasterChannel}
-        key={channel}
-        name={name}
-      />
-      )}
-      />
-      <Route path="/user" render={(props)=>(<NewUser temp={temp}handleChange={handleChange} name={name} setName={setName} onSub={onSub}/> )} />
+      <Switch>
+        <Route
+          path="/Chatroom-App/"
+          exact
+          render={(props) => (
+            <General
+              channel={channel}
+              changeMasterChannel={changeMasterChannel}
+              key={channel}
+              name={name}
+            />
+          )}
+        />
+        <Route
+          path="/user"
+          render={(props) => (
+            <NewUser
+              temp={temp}
+              handleChange={handleChange}
+              name={name}
+              setName={setName}
+              onSub={onSub}
+            />
+          )}
+        />
       </Switch>
     </>
   );

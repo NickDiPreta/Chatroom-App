@@ -36,7 +36,7 @@ class General extends Component {
     },
     viewMenu: false,
     viewMessages: true,
-    currentChannel: ""
+    currentChannel: "",
   };
 
   constructor(props) {
@@ -81,9 +81,9 @@ class General extends Component {
     this.setState((state) => ({ viewMenu: menu }));
   };
   handleChannelChange = (channel) => {
-    this.props.changeMasterChannel(channel)
-    this.setState((state) => ({currentChannel : channel}))
-  }
+    this.props.changeMasterChannel(channel);
+    this.setState((state) => ({ currentChannel: channel }));
+  };
   render() {
     return (
       <div className="App">
@@ -98,7 +98,13 @@ class General extends Component {
             </HoverButton>
           </div>
           <span className="channel">{this.props.channel}</span>
-          <div className="userinfo"><Link to="/user"><span className="username">{this.props.name != 'newUser' ? this.props.name : "Sign In"}</span></Link></div>
+          <div className="userinfo">
+            <Link to="/user">
+              <span className="username">
+                {this.props.name != "newUser" ? this.props.name : "Sign In"}
+              </span>
+            </Link>
+          </div>
         </div>
         <div className="main-content">
           <CSSTransition
@@ -109,7 +115,7 @@ class General extends Component {
             onExited={() => this.showMessages}
             appear
           >
-            <ChannelList handleChannelChange={this.handleChannelChange} />
+            <ChannelList username={this.props.name} handleChannelChange={this.handleChannelChange} />
           </CSSTransition>
 
           <div className="messages-wrapper">

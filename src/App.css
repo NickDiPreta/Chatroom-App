@@ -200,6 +200,10 @@ ul {
 
 .direct-messages{
   margin-top:20px;
+  
+}
+.direct-messages > ul{
+  padding-right: 0px;
 }
 .channels-head{
   background-color:rgb(248, 125, 104);
@@ -243,3 +247,7 @@ a {
   align-items: center;
 }
 
+.hidden{
+  font-size: 0px;
+  color: transparent;
+}

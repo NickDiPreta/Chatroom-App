@@ -24,7 +24,18 @@ const ChannelList = (props) => {
       <MenuHover onClick={() => props.handleChannelChange(e)}>{e}</MenuHover>
     );
   });
-
+  const dms = ["Jenny", "Malik", "Austin", "Aaliyah"];
+  const hide = props.username
+  const directMessages = dms.map((d) => {
+    if (hide < d){
+    return (
+      <MenuHover onClick={() => props.handleChannelChange(`${d}-${hide}`)}>{d}</MenuHover>
+    )}
+    else{
+      return (
+        <MenuHover onClick={() => props.handleChannelChange(`${hide}-${d}`)}>{d}</MenuHover>
+      )};
+  });
   return (
     <div className="menu">
       <div className="channels-head">
@@ -32,18 +43,13 @@ const ChannelList = (props) => {
       </div>
       <div className="team-chat">
         <h4>Team Chat</h4>
-        {teamChannels}
-        <ul className="menulist"></ul>
+
+        <ul className="menulist">{teamChannels}</ul>
       </div>
 
       <div className="direct-messages">
         <h4>Direct Messages</h4>
-        <ul className="menulist">
-          <MenuHover>Jenny</MenuHover>
-          <MenuHover>Malik</MenuHover>
-          <MenuHover>Austin</MenuHover>
-          <MenuHover>Aaliyah</MenuHover>
-        </ul>
+        <ul className="menulist">{directMessages}</ul>
       </div>
     </div>
   );
