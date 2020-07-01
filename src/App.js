@@ -34,6 +34,7 @@ const App = () => {
     return [value, setValue];
   }
   const handleChange = (event) => {
+    event.preventDefault();
     setName(event.target.value);
   };
 
