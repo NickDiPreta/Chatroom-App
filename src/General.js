@@ -98,7 +98,7 @@ class General extends Component {
             </HoverButton>
           </div>
           <span className="channel">{this.props.channel}</span>
-          <div className="userinfo"><Link to="/user"><img className="user-profile" src={avatar} /><span className="username">{this.props.name != 'newUser' ? this.props.name : "Sign In"}</span></Link></div>
+          <div className="userinfo"><Link to="/user"><span className="username">{this.props.name != 'newUser' ? this.props.name : "Sign In"}</span></Link></div>
         </div>
         <div className="main-content">
           <CSSTransition
