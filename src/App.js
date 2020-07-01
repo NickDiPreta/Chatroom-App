@@ -5,7 +5,7 @@ import Input from "./Input";
 import randomName from "./Components/RandomName";
 import styled, { css } from "styled-components";
 import hamburger from "./hamburger.png";
-import back from "./back-arrow.png"
+import back from "./back-arrow.png";
 import avatar from "./blank-avatar.svg";
 import {
   BrowserRouter as Router,
@@ -92,7 +92,7 @@ class App extends Component {
               )}
             </HoverButton>
           </div>
-          <span className="channel">Nick's Lounge</span>
+          <span className="channel">Lounge A</span>
           <img className="user-profile" src={avatar} />
         </div>
         <div className="main-content">
