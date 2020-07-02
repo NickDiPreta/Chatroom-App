@@ -31,7 +31,7 @@ const Input = (props) =>{
         value={text}
         type="text"
         placeholder="Message"
-        autoFocus={true} />
+         />
         <ButtonHover>Send</ButtonHover>
       </form>
     </div>

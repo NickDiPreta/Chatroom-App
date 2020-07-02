@@ -11,13 +11,12 @@
 }
 
 .App-header {  
-  padding-bottom: 2vh;
   background-color: white;
   overflow: visible;
   width: 100%;
   text-align: center;
   color: white;
-  font-size: 1.5em;
+  font-size: 1.3em;
   align-items: center;
   display: flex;
   justify-content: space-evenly;
@@ -158,7 +157,7 @@ ul {
   position: absolute;
   left: 0;
   width: 78vw;
-  height: 90vh;
+  height: 88vh;
   background-color: tomato;
   color: white;
   flex-grow: 3;
@@ -183,7 +182,7 @@ ul {
   color: white;
 }
 .my-node-enter-done {
-  height:86vh;
+  height:88vh;
 }
 .my-node-exit {
   width: 78vw;
