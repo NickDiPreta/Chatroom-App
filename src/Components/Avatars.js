@@ -1,0 +1,72 @@
+import React from "react";
+
+const Avatars = [
+  <img
+    src="https://i.imgur.com/lk2WS8W.png"
+  />,
+  <img
+    src="https://i.imgur.com/vzT6Mp2.png"
+  />,
+  <img
+    src="https://i.imgur.com/aUTfjHC.png"
+  />,
+  <img
+    src="https://i.imgur.com/IOTDS9r.png"
+  />,
+  <img
+    src="https://i.imgur.com/ZBGtmyB.png"
+  />,
+  <img
+    src="https://i.imgur.com/Rs7eJB0.png"
+  />,
+  <img
+    src="https://i.imgur.com/BLZtKu9.png"
+  />,
+  <img
+    src="https://i.imgur.com/QLJ2QQt.png"
+  />,
+  <img
+    src="https://i.imgur.com/CKva4H8.png"
+  />,
+  <img
+    src="https://i.imgur.com/wcSfhC0.png"
+  />,
+  <img
+    src="https://i.imgur.com/qUnGcfg.png"
+  />,
+  <img
+    src="https://i.imgur.com/BxZn2mq.png"
+  />,
+  <img
+    src="https://i.imgur.com/Xr3QJUI.png"
+  />,
+  <img
+    src="https://i.imgur.com/DcMdAdH.png"
+  />,
+  <img
+    src="https://i.imgur.com/k1GQoQX.png"
+  />,
+  <img
+    src="https://i.imgur.com/Ncqb52u.png"
+  />,
+  <img
+    src="https://i.imgur.com/cdhtwV8.png"
+  />,
+  <img
+    src="https://i.imgur.com/LWvuZvv.png"
+  />,
+  <img
+    src="https://i.imgur.com/HhBSR3V.png"
+  />,
+  <img
+    src="https://i.imgur.com/fiJq5BD.png"
+  />,
+  <img
+    src="https://i.imgur.com/3F5ZeVm.png"
+  />,
+  <img
+    src="https://i.imgur.com/np3MVYq.png"
+  />,
+];
+
+export default Avatars;

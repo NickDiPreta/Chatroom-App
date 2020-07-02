@@ -1,21 +1,28 @@
-import React from "react";
+import React, {useState} from "react";
 import ConvertTimeStamp from "./Components/ConvertTimeStamp";
+import Avatars from "./Components/Avatars";
 
 function randomColor() {
-  return("#6495ed");
+  return "#" + (((1 << 24) * Math.random()) | 0).toString(16);
 }
-const Messages = (props) => {
-  const messages = props.messages;
 
+const Messages = (props) => {
+  const [names, setNames] = useState([])
+  let x = -1;
+  const messages = props.messages;
   const makeMessage = (message) => {
-    console.log(message);
+    
     let time = ConvertTimeStamp(message[1]);
     if (message[0] != null) {
       let halfs = message[0].split(":");
+      console.log(names)
+      const copy = [...names]
+      copy.indexOf(halfs[0]) < 0 ? x += 1 : setNames(halfs[0],[...copy])
       return (
         <li className="Messages-message">
-          <span className="avatar" style={{ backgroundColor: randomColor() }} />
-
+          <span className="avatar">
+            {Avatars[x]}
+          </span>
           <div className="Message-content">
             <div className="username">{time}</div>
             <div className="text">
@@ -39,7 +46,10 @@ const Messages = (props) => {
       let newText = text.replace(`${props.name} :`, "");
       return (
         <li className={className}>
-          <span className="avatar" style={{ backgroundColor: member.color }} />
+          <span
+            className="avatar"
+            style={{ backgroundColor: member.color }}
+          ></span>
           <div className="Message-content">
             <div className="username">{username}</div>
             <div className="text">{newText}</div>
