@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Chatroom-App/static/css/main.bf18b48e.chunk.css",
+    "main.css": "/Chatroom-App/static/css/main.16b291b2.chunk.css",
     "main.js": "/Chatroom-App/static/js/main.7c920a9a.chunk.js",
     "main.js.map": "/Chatroom-App/static/js/main.7c920a9a.chunk.js.map",
     "runtime-main.js": "/Chatroom-App/static/js/runtime-main.a6f136b8.js",
@@ -8,16 +8,16 @@
     "static/js/2.f085e241.chunk.js": "/Chatroom-App/static/js/2.f085e241.chunk.js",
     "static/js/2.f085e241.chunk.js.map": "/Chatroom-App/static/js/2.f085e241.chunk.js.map",
     "index.html": "/Chatroom-App/index.html",
-    "precache-manifest.32cfe02d268e55e22fc0ff07fa5a6ee0.js": "/Chatroom-App/precache-manifest.32cfe02d268e55e22fc0ff07fa5a6ee0.js",
+    "precache-manifest.02e067a12874a7453ffc29ce89bad774.js": "/Chatroom-App/precache-manifest.02e067a12874a7453ffc29ce89bad774.js",
     "service-worker.js": "/Chatroom-App/service-worker.js",
-    "static/css/main.bf18b48e.chunk.css.map": "/Chatroom-App/static/css/main.bf18b48e.chunk.css.map",
+    "static/css/main.16b291b2.chunk.css.map": "/Chatroom-App/static/css/main.16b291b2.chunk.css.map",
     "static/js/2.f085e241.chunk.js.LICENSE.txt": "/Chatroom-App/static/js/2.f085e241.chunk.js.LICENSE.txt",
     "static/media/blank-avatar.svg": "/Chatroom-App/static/media/blank-avatar.376ab138.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.a6f136b8.js",
     "static/js/2.f085e241.chunk.js",
-    "static/css/main.bf18b48e.chunk.css",
+    "static/css/main.16b291b2.chunk.css",
     "static/js/main.7c920a9a.chunk.js"
   ]
 }
