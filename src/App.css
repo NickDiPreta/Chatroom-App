@@ -16,14 +16,13 @@
   overflow: visible;
   width: 100%;
   text-align: center;
-  color: black;
+  color: white;
   font-size: 1.5em;
   align-items: center;
   display: flex;
   justify-content: space-evenly;
   align-content: center;
-  border-bottom: 1px solid rgba(211, 211, 211, 0.5);
-  background-color: thistle;
+  background-color: #293241;
 }
 
 .Messages-list {
@@ -158,8 +157,8 @@ ul {
   flex-direction: column;
   position: absolute;
   left: 0;
-  width: 80vw;
-  height: 78vh;
+  width: 78vw;
+  height: 90vh;
   background-color: tomato;
   color: white;
   flex-grow: 3;
@@ -179,15 +178,15 @@ ul {
 }
 .my-node-enter-active {
   transition: all 400ms;
-  width: 80vw;
+  width: 78vw;
   background-color: tomato;
   color: white;
 }
 .my-node-enter-done {
-  height:87vh;
+  height:86vh;
 }
 .my-node-exit {
-  width: 80vw;
+  width: 78vw;
   background-color: tomato;
   color: white;
 }
@@ -226,7 +225,7 @@ a {
   color: white;
 }
 .username{
-  color:black;
+  color:white;
   margin-left:2px;
   line-height: 1.5em;
 }
@@ -244,7 +243,8 @@ a {
   width: 100vw;
   margin: auto;
   height: 100%;
-  background-color: blanchedalmond;
+  background-color: #293241;
+  color:white;
 }
 .userhead{
   display: flex;
@@ -281,7 +281,7 @@ a {
 }
 
 .Input{
-  background-color: thistle;
+  background-color: #293241;
   height: 10vh;
   display: flex;
   align-items: center;
@@ -290,4 +290,11 @@ a {
 .channel{
   font-weight: 700;
   text-decoration: underline;
+}
+.user-form{
+  display: flex;
+  width:80%;
+}
+#name{
+  margin-right: 5px;
 }

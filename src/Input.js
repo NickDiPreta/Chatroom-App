@@ -1,6 +1,14 @@
-import React, {useState} from "react"
+import React, {useState} from "react";
+import styled, { css } from "styled-components";
 
 
+const ButtonHover = styled.button`
+  :hover {
+    cursor: pointer;
+    background-color: rgb(248, 125, 104);
+    transition: 0.5s;
+  }
+`;
 const Input = (props) =>{
   const [text, setText] = useState("")
 
@@ -24,7 +32,7 @@ const Input = (props) =>{
         type="text"
         placeholder="Message"
         autoFocus={true} />
-        <button>Send</button>
+        <ButtonHover>Send</ButtonHover>
       </form>
     </div>
   )
