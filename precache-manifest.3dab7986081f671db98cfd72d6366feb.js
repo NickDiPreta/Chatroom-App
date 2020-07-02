@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6aabc08a44ae07802e7e965f5a8263aa",
+    "revision": "1eea6e7d66db099569ab755f6235c853",
     "url": "/Chatroom-App/index.html"
   },
   {
-    "revision": "8b7edfa6d4f86e9e6d5f",
-    "url": "/Chatroom-App/static/css/main.e3ef6c8e.chunk.css"
+    "revision": "e1ad2e72aa2a2b886368",
+    "url": "/Chatroom-App/static/css/main.63aaa15f.chunk.css"
   },
   {
-    "revision": "f28aa8f141e86df92394",
-    "url": "/Chatroom-App/static/js/2.b4248f0e.chunk.js"
+    "revision": "b1cfdb4876b0e1d8086d",
+    "url": "/Chatroom-App/static/js/2.47bebf06.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/Chatroom-App/static/js/2.b4248f0e.chunk.js.LICENSE.txt"
+    "url": "/Chatroom-App/static/js/2.47bebf06.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8b7edfa6d4f86e9e6d5f",
-    "url": "/Chatroom-App/static/js/main.e33cc558.chunk.js"
+    "revision": "e1ad2e72aa2a2b886368",
+    "url": "/Chatroom-App/static/js/main.f9520d1b.chunk.js"
   },
   {
     "revision": "8e4b3d75e8ac93207cb7",
