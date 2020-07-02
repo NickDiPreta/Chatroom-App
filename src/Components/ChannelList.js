@@ -1,13 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import styled, { css } from "styled-components";
-import {
-  BrowserRouter as Router,
-  Redirect,
-  Switch,
-  Route,
-  Link,
-} from "react-router-dom";
-import App from "../App";
+import Popup from "./Popup";
 
 const MenuHover = styled.li`
   :hover {
@@ -18,24 +11,60 @@ const MenuHover = styled.li`
 `;
 
 const ChannelList = (props) => {
+  const [tempName, setTempName] = useState("");
+
+  const [dms, newDm] = useStickyState(
+    ["Jenny", "Malik", "Austin", "Aaliyah"],
+    []
+  );
+
+  function useStickyState(defaultValue, key) {
+    const [value, setValue] = React.useState(() => {
+      const stickyValue = window.localStorage.getItem(key);
+      return stickyValue !== null ? JSON.parse(stickyValue) : defaultValue;
+    });
+    React.useEffect(() => {
+      window.localStorage.setItem(key, JSON.stringify(value));
+    }, [key, value]);
+    return [value, setValue];
+  }
+
   const allChannels = ["General", "Tech-talk", "Party-time", "Accomplishments"];
   const teamChannels = allChannels.map((e) => {
     return (
       <MenuHover onClick={() => props.handleChannelChange(e)}>{e}</MenuHover>
     );
   });
-  const dms = ["Jenny", "Malik", "Austin", "Aaliyah"];
-  const hide = props.username
+
+  const hide = props.username;
   const directMessages = dms.map((d) => {
-    if (hide < d){
-    return (
-      <MenuHover onClick={() => props.handleChannelChange(`${d}-${hide}`)}>{d}</MenuHover>
-    )}
-    else{
+    if (hide < d) {
       return (
-        <MenuHover onClick={() => props.handleChannelChange(`${hide}-${d}`)}>{d}</MenuHover>
-      )};
+        <MenuHover onClick={() => props.handleChannelChange(`${d}-${hide}`)}>
+          {d}
+        </MenuHover>
+      );
+    } else {
+      return (
+        <MenuHover onClick={() => props.handleChannelChange(`${hide}-${d}`)}>
+          {d}
+        </MenuHover>
+      );
+    }
   });
+
+  const createChannel = () => {
+    props.togglePopup(!props.popup);
+  };
+  const handleSub = (event) => {
+    event.preventDefault();
+    let copy = [...dms];
+    copy.push(tempName);
+    newDm(copy);
+  };
+  const handleNewChannel = (event) => {
+    setTempName(event.target.value);
+  };
   return (
     <div className="menu">
       <div className="channels-head">
@@ -48,7 +77,23 @@ const ChannelList = (props) => {
       </div>
 
       <div className="direct-messages">
-        <h4>Direct Messages</h4>
+        <div className="plus">
+          <div className="spacer"></div>
+          <h4>Direct Messages</h4>
+          <div onClick={createChannel}>
+            <img id="plus-symbol" src="https://i.imgur.com/LgkCYY2.png" />
+          </div>
+        </div>
+        {props.popup ? (
+          <Popup
+            submit={handleSub}
+            tempName={tempName}
+            setTempName={setTempName}
+            handleNewChannel={handleNewChannel}
+          />
+        ) : (
+          ""
+        )}
         <ul className="menulist">{directMessages}</ul>
       </div>
     </div>

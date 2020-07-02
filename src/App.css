@@ -251,3 +251,25 @@ a {
   font-size: 0px;
   color: transparent;
 }
+#plus-symbol{
+  height:16px;
+  width:16px;
+  border: 1px solid white;
+  padding:2px;
+  border-radius: 50%;
+}
+.plus{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.spacer{
+  padding-right: 3vw;
+}
+.popup{
+  z-index: 10000;
+  background-color: tomato;
+  opacity: .5;
+}

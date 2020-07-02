@@ -19,6 +19,7 @@ const App = () => {
 
   const [name, setName] = useStickyState("newUser", "updatedUser");
   const [temp, setTemp] = useState("");
+  const [popup, togglePopup] = useState(false)
 
   function useStickyState(defaultValue, key) {
     const [value, setValue] = React.useState(() => {
@@ -53,6 +54,8 @@ const App = () => {
               changeMasterChannel={changeMasterChannel}
               key={channel}
               name={name}
+              togglePopup={togglePopup}
+              popup={popup}
             />
           )}
         />

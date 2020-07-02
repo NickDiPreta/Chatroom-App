@@ -115,7 +115,10 @@ class General extends Component {
             onExited={() => this.showMessages}
             appear
           >
-            <ChannelList username={this.props.name} handleChannelChange={this.handleChannelChange} />
+            <ChannelList username={this.props.name} handleChannelChange={this.handleChannelChange} 
+            togglePopup={this.props.togglePopup}
+            popup={this.props.popup}/>
+            
           </CSSTransition>
 
           <div className="messages-wrapper">
