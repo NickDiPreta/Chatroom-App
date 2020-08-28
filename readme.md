@@ -50,12 +50,13 @@ Below is the component that is used to create the menu that the user can click o
 
 ```js const ChannelList = (props) => {
   const [tempName, setTempName] = useState("");
-
+  
+  //seed channels for direct messages for demo
   const [dms, newDm] = useStickyState(
     ["Jenny", "Malik", "Austin", "Aaliyah"],
     []
   );
-
+  //custom hook implementation that makes use of local storage to have states persist
   function useStickyState(defaultValue, key) {
     const [value, setValue] = React.useState(() => {
       const stickyValue = window.localStorage.getItem(key);
@@ -66,7 +67,7 @@ Below is the component that is used to create the menu that the user can click o
     }, [key, value]);
     return [value, setValue];
   }
-
+  //seed channels for demo
   const allChannels = ["General", "Tech-talk", "Party-time", "Accomplishments"];
   const teamChannels = allChannels.map((e) => {
     return (
@@ -74,6 +75,7 @@ Below is the component that is used to create the menu that the user can click o
     );
   });
 
+  //maps out open dm channels for a user
   const hide = props.username;
   const directMessages = dms.map((d) => {
     if (hide < d) {
@@ -90,16 +92,18 @@ Below is the component that is used to create the menu that the user can click o
       );
     }
   });
-
+// toggles popup to create new channel
   const createChannel = () => {
     props.togglePopup(!props.popup);
   };
+  // handles submission of new channel from popup toggle
   const handleSub = (event) => {
     event.preventDefault();
     let copy = [...dms];
     copy.push(tempName);
     newDm(copy);
   };
+  // new channel helper function
   const handleNewChannel = (event) => {
     setTempName(event.target.value);
   };
